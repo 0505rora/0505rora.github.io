@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            background-image: url('MainPage.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        input[id="menuicon"] {
+            display: none;
+        }
+        input[id="menuicon"] + label {
+            display: block;
+            width: 60px;
+            height: 40px;
+            position: fixed;
+            right: 80px;
+            top:calc(50% - 25px);
+            transition:all .35s;
+            cursor: pointer;
+        }
+        input[id=menuicon] + label span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            border-radius: 30px;
+            background: #006DB5;
+            transition:all .35s;
+        }
+        input[id="menuicon"] + label span:nth-child(1) {
+            top: 0;
+        }
+        input[id="menuicon"] + label span:nth-child(2) {
+            top: 50%;
+            transform:translateY(-50%);
+        }
+        input[id="menuicon"] + label span:nth-child(3) {
+            bottom: 0;
+        }
+        input[id="menuicon"]:checked + label span:nth-child(1) {
+            top:50%;
+            transform:translateY(-50%) rotate(45deg);
+        }
+        input[id="menuicon"]:checked + label span:nth-child(2) {
+            opacity: 0;
+        }
+        input[id="menuicon"]:checked + label span:nth-child(3) {
+            bottom:50%;
+            transform:translateY(50%) rotate(-45deg);
+        }
+        div[class="sidebar"] {
+            width: 300px;
+            height: 100%;
+            background: #9FA9D8;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            z-index: 1;
+            transition:all .35s;
+        }
+        input[id="menuicon"]:checked + label {
+            z-index:2;
+            right: 350px;
+        }
+        input[id="menuicon"]:checked + label span {
+            background: #9FA9D8;
+        }
+        input[id="menuicon"]:checked + label + div {
+            right:0;
+        }
+        .ins {
+            padding-top: 530px;
+            padding-left: 110px;
+            color: #006DB5;
+            font-size: 30px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        .blog {
+            padding-left: 110px;
+            margin-top: 0;
+            color: #006DB5;
+            font-size: 30px;
+        }
+        a {
+            text-decoration: none;
+            }
+        a:link {
+            color:#006DB5;
+        }
+        a:visited {
+            color: #006DB5;
+        }
+        a:hover {
+            color:#9FA9D8;
+            text-decoration:underline;
+        }
+        .bar {
+            text-align: center;
+            padding-bottom: 100px;
+            padding-top: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+        <input type="checkbox" id="menuicon">
+        <label for="menuicon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="sidebar">
+            <p class="bar"><a href="에코시아.pdf">기업조사보고서-에코시아</a></p>
+            <p class="bar"><a href="도박.pdf">불법도박웹사이트 포스터</a></p>
+            <p class="bar"><a href="trip.jpg">여행지리-여행상품개발</a></p>
+            <p class="bar"><a href="">2022 영어스피치대회</a></p>
+        </div>
+    <p class="ins"><a href="https://www.instagram.com/milky_way__0455">instagram @milky_way__0455</a></p>
+    <p class="blog"><a href="https://blog.naver.com/hyun032256">blog : *｡˚✧₊*.•*♪</a></p>
+</body>
+</html>
